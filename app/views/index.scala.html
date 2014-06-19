@@ -1,0 +1,39 @@
+@(message: String)
+
+@main("Welcome to Play!") {
+
+	<div class="container">
+
+		<!-- Test 1 -->
+		<div class="row">			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>Test SBT-Jst</h3>
+				</div>
+				<div id="peopleList" class="panel-body">
+				</div>
+			</div>	
+		</div>
+
+		<!-- Test 2 -->
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>Test 2</h3>
+				</div>
+				<div id="" class="panel-body">
+				</div>
+			</div>			
+		</div>
+
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$("#peopleList").html(window.JST["templates/people_list.html"](
+				{people: ['moe', 'curly', 'larry']}
+			))
+		})		
+	</script>
+
+}
