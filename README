@@ -1,4 +1,4 @@
-This is your new Play application
-=================================
+play-sbt-web-tester
+===================
 
-This file will be packaged with your application, when using `activator dist`.
+Test application for [sbt-web](https://github.com/sbt/sbt-web)
