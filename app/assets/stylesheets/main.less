@@ -1,2 +1,49 @@
-body {
+@color1: #2F2727;
+@color2: #1a82f7;
+
+#even-stops { 
+	
+	height:50px;
+
+	/* http://css-tricks.com/examples/CSS3Gradient/ */
+
+	/* fallback DIY*/ /* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, left top, right top, from(@color1), color-stop(0.25, @color2), color-stop(0.5, @color1), color-stop(0.75, @color2), to(@color1)); 
+
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+	/* IE 10 */ 
+	background: -ms-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
 }
+
+#even-stops-autoprefixer { 
+
+	height:50px;
+	
+	/* http://css-tricks.com/examples/CSS3Gradient/ */
+
+	/* fallback DIY*/ /* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, left top, right top, from(@color1), color-stop(0.25, @color2), color-stop(0.5, @color1), color-stop(0.75, @color2), to(@color1)); 
+
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+	/* IE 10 */ 
+	background: -ms-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(left, @color1, @color2, @color1, @color2, @color1); 
+
+}
+

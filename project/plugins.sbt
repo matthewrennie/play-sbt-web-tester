@@ -17,5 +17,6 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.0.0")
 
-lazy val root = project.in(file(".")).dependsOn(sbtJst)
+lazy val root = project.in(file(".")).dependsOn(sbtJst).dependsOn(sbtAutoprefixer)
 lazy val sbtJst = uri("git://github.com/matthewrennie/sbt-jst")
+lazy val sbtAutoprefixer = uri("git://github.com/matthewrennie/sbt-autoprefixer")

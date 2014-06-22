@@ -13,9 +13,13 @@ libraryDependencies ++= Seq(
   ws,
   "org.webjars" % "bootstrap" % "3.1.1-2",
   "org.webjars" % "jquery" % "1.11.1",
-  "org.webjars" % "underscorejs" % "1.6.0-3"
+  "org.webjars" % "underscorejs" % "1.6.0-3"  
 )
 
 JstKeys.prettify in Assets := true
 
 JstKeys.outputPath := "javascripts/templates.js"
+
+JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
+
+pipelineStages := Seq(autoprefixer)
