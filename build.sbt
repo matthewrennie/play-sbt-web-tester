@@ -16,10 +16,16 @@ libraryDependencies ++= Seq(
   "org.webjars" % "underscorejs" % "1.6.0-3"  
 )
 
+LessKeys.sourceMap in Assets := false
+
 JstKeys.prettify in Assets := true
 
 JstKeys.outputPath := "javascripts/templates.js"
 
 JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
 
-pipelineStages := Seq(autoprefixer)
+AutoprefixerKeys.sourceMap in Assets := false
+
+includeFilter in autoprefixer := GlobFilter("main.css")
+
+pipelineStages in Assets := Seq(autoprefixer)
